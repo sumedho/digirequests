@@ -1,6 +1,9 @@
 /* SPDX-License-Identifier: GPL-2.0-or-later */
 /* Digitakt I 1.53: independent, ephemeral pitch counters for audio steps. */
 #include "digitakt-mk1/core3.h"
+#ifdef DT_LINKABLE
+#include "core21.h" /* Core 2.1 exports no firmware locations */
+#endif
 typedef uint32_t u32;
 typedef int32_t s32;
 typedef uint8_t u8;

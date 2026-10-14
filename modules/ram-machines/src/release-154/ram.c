@@ -12,6 +12,9 @@ static void ram_unlock(u32 sr){__asm__ volatile("move.w %0,%%sr"::"d"(sr):"memor
 #define ram_unlock euc_unlock
 #endif
 #include "digitakt-mk1/core3.h"
+#ifdef DT_LINKABLE
+#include "core21.h" /* Core 2.1 exports no firmware locations */
+#endif
 
 #define RAM_R 120
 #define RAM_P 121

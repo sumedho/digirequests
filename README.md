@@ -1,22 +1,24 @@
 # digirequests
 
 Source for six Digitakt I mods by sumedho, for OS 1.53 and 1.54. Each mod is
-an Elekloader format-2 module built on Core 3.0, and each folder is laid out
+an Elekloader format-2 module for Core 2.1, the core Modwerk's catalogue ships, and each folder is laid out
 for Modwerk's source builder.
 
 | Mod | Version | Requires | Folder |
 | --- | --- | --- | --- |
-| MIDI Retrig | 2.0.0 | Core 3.0 | [modules/midi-retrig](modules/midi-retrig) |
-| CC Assignment Names | 2.1.0 | Core 3.0, DT Support | [modules/cc-names](modules/cc-names) |
-| Euclidean Sequencing | 1.1.3 | Core 3.0, DT Support | [modules/euclidean](modules/euclidean) |
-| RAM Record and Playback | 1.3.0 | Core 3.0, Machine Pages 1.1 | [modules/ram-machines](modules/ram-machines) |
-| Per-step Note Accumulator | 1.1.0 | Core 3.0 | [modules/note-accumulator](modules/note-accumulator) |
-| Sample Snap and Crossfade | 0.2.1 | Core 3.0 | [modules/sample-tools](modules/sample-tools) |
+| MIDI Retrig | 2.0.1 | Core 2.1 | [modules/midi-retrig](modules/midi-retrig) |
+| CC Assignment Names | 2.1.1 | Core 2.1, DT Support | [modules/cc-names](modules/cc-names) |
+| Euclidean Sequencing | 1.1.4 | Core 2.1, DT Support | [modules/euclidean](modules/euclidean) |
+| RAM Record and Playback | 1.3.1 | Core 2.1, Machine Pages 1.2 | [modules/ram-machines](modules/ram-machines) |
+| Per-step Note Accumulator | 1.1.1 | Core 2.1 | [modules/note-accumulator](modules/note-accumulator) |
+| Sample Snap and Crossfade | 0.2.2 | Core 2.1 | [modules/sample-tools](modules/sample-tools) |
 
 `dependencies/dt-support` is a small shared lifetime hook used by CC
-Assignment Names and Euclidean Sequencing. Core 3.0 and Machine Pages are
-irpina's Elekloader frameworks, pinned at
-[`3acac10e`](https://github.com/irpina/elekloader/tree/3acac10ea86882a2ea51c9377ac6bd58fc4fec57).
+Assignment Names and Euclidean Sequencing. `dependencies/machine-pages` is
+irpina's Machine Pages 1.1 from Elekloader
+[`3acac10e`](https://github.com/irpina/elekloader/tree/3acac10ea86882a2ea51c9377ac6bd58fc4fec57/mods/machine-pages),
+adapted to run on Core 2.1 (version 1.2; see its `NOTICE`). Core 2.1 itself is
+irpina's, as pinned in Modwerk's catalogue.
 
 ## Layout
 
@@ -42,5 +44,7 @@ each mod's Modwerk listing.
 
 ## Licence
 
-GPL-2.0-or-later; see each folder's `LICENSE` and `NOTICE`. The Core 3.0
-header copied into the sources is irpina's, under the same licence.
+GPL-2.0-or-later; see each folder's `LICENSE` and `NOTICE`. The
+`core3.h` header copied into the sources is irpina's, under the same licence;
+the mods use only its declarations that Core 2.1 provides, and `core21.h`
+names the firmware locations Core 2.1 does not export.
