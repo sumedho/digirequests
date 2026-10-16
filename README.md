@@ -8,7 +8,7 @@ for Modwerk's source builder.
 | --- | --- | --- | --- |
 | MIDI Retrig | 2.0.1 | Core 2.1 | [modules/midi-retrig](modules/midi-retrig) |
 | CC Assignment Names | 2.1.1 | Core 2.1, DT Support | [modules/cc-names](modules/cc-names) |
-| Euclidean Sequencing | 1.1.4 | Core 2.1, DT Support | [modules/euclidean](modules/euclidean) |
+| Euclidean Sequencing | 1.1.5 | Core 2.1, DT Support | [modules/euclidean](modules/euclidean) |
 | RAM Record and Playback | 1.3.1 | Core 2.1, Machine Pages 1.2 | [modules/ram-machines](modules/ram-machines) |
 | Per-step Note Accumulator | 1.1.1 | Core 2.1 | [modules/note-accumulator](modules/note-accumulator) |
 | Sample Snap and Crossfade | 0.2.2 | Core 2.1 | [modules/sample-tools](modules/sample-tools) |
